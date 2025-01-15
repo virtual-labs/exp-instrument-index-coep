@@ -2,38 +2,138 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary purpose of an Instrument Index sheet?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "To record experimental data ",
+        "b": "To identify and organize instruments installed in a plant ",
+        "c": "To calculate experimental results ",
+        "d": "To prepare a lab report"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following is NOT typically included in an Instrument Index sheet? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Instrument name",
+        "b": "Instrument description",
+        "c": "Instrument location",
+        "d": "Experimental procedure"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the benefit of using an Instrument Index sheet in a laboratory setting? ",
+      "answers": {
+        "a": "It helps to reduce experimental errors",
+        "b": "It increases the speed of experimentation",
+        "c": "It improves laboratory organization and efficiency ",
+        "d": "It is not necessary in a laboratory setting"
       },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Which instrument would typically be included in an Instrument Index sheet? ",
+      "answers": {
+        "a": "Sensors",
+        "b": "Actuators",
+        "c": "Converters",
+        "d": "Transmitters",
+		"e": "All mentioned"
+      },
+     
+      "correctAnswer": "e",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What information should be recorded for each instrument in the Instrument Index sheet? ",
+      "answers": {
+        "a": "Only the instrument name",
+        "b": "Only the instrument location",
+        "c": "Both the instrument name and location",
+        "d": "Neither the instrument name nor location"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Why is it important to update the Instrument Index sheet regularly? ",
+      "answers": {
+        "a": "To ensure accuracy of experimental data",
+        "b": "To reflect changes in instrument inventory",
+        "c": "To improve laboratory safety",
+        "d": "To reduce laboratory costs"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Who is typically responsible for maintaining the Instrument Index sheet?",
+      "answers": {
+        "a": "Laboratory technician ",
+        "b": "Research scientist",
+        "c": "Laboratory manager ",
+        "d": "Student researcher"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the Instrument Index sheet used for in a laboratory setting? ",
+      "answers": {
+        "a": "To store experimental data",
+        "b": "To track instrument maintenance",
+        "c": "To locate laboratory instruments",
+        "d": "To prepare a lab report"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "How often should the Instrument Index sheet be reviewed and updated?",
+      "answers": {
+        "a": "Daily",
+        "b": "Weekly",
+        "c": "Monthly",
+        "d": "Quarterly"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the consequence of not having an up-to-date Instrument Index sheet? ",
+      "answers": {
+        "a": "Increased laboratory efficiency ",
+        "b": "Decreased laboratory safety",
+        "c": "Difficulty in locating instruments ",
+        "d": "Improved experimental accuracy"
+      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+  
+  
+  
+  
+  
+  
+  
   ]
 }
