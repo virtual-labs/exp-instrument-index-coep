@@ -2,38 +2,137 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the purpose of including a picture or diagram of each instrument in the Instrument Index sheet? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "To provide a visual aid for instrument identification",
+        "b": "To increase the aesthetic appeal of the Index sheet",
+        "c": "To reduce the amount of written information",
+        "d": "To make the Index sheet more difficult to use"
+		
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "How often should the Instrument Index sheet be reviewed and updated in a plant setting? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Daily",
+        "b": "Weekly",
+        "c": "Monthly",
+        "d": "Quarterly"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What information should be included in the 'Instrument Description' column of the Instrument Index sheet?",
+      "answers": {
+        "a": "Only the instrument's brand name",
+        "b": "Only the instrument's model number",
+        "c": "A brief description of the instrument's function and use ",
+        "d": "The instrument's maintenance schedule"
       },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "Why is it important to include the 'Instrument Location' column in the Instrument Index sheet? ",
+      "answers": {
+        "a": "To track instrument maintenance schedules",
+        "b": "To identify instrument functionality ",
+        "c": "To facilitate instrument location and retrieval",
+        "d": "To record experimental data"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the benefit of using a standardized format for the Instrument Index sheet in a plant setting? ",
+      "answers": {
+        "a": "It reduces the time spent on instrument maintenance ",
+        "b": "It improves laboratory safety",
+        "c": "It increases the efficiency of instrument location and retrieval",
+        "d": "It decreases the accuracy of experimental data"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+  
+  {
+      "question": "Who is typically responsible for maintaining the Instrument Index sheet in a plant setting? ",
+      "answers": {
+        "a": "Laboratory technician",
+        "b": "Plant manager ",
+        "c": "Quality control specialist",
+        "d": "Instrument manufacturer"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	
+  {
+      "question": "How does the Instrument Index sheet contribute to laboratory safety in a plant setting? ",
+      "answers": {
+        "a": "By reducing the risk of instrument malfunction",
+        "b": "By increasing the speed of experimentation ",
+        "c": "By facilitating instrument location and retrieval ",
+        "d": "By providing a record of experimental data"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+  
+  
+  {
+      "question": "What is the consequence of not having an up-to-date Instrument Index sheet in a plant setting? ",
+      "answers": {
+        "a": "Increased laboratory efficiency ",
+        "b": "Decreased laboratory safety ",
+        "c": "Difficulty in locating instruments",
+        "d": "Improved experimental accuracy"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+  
+  
+  {
+      "question": "How does the Instrument Index sheet support the overall operation of a plant? ",
+      "answers": {
+        "a": "By reducing production costs",
+        "b": "By increasing product quality ",
+        "c": "By improving laboratory organization and efficiency ",
+        "d": "By enhancing customer satisfaction"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+  
+  
+  {
+      "question": "What is the primary advantage of using an Instrument Index sheet in a plant setting? ",
+      "answers": {
+        "a": "It reduces the need for instrument maintenance",
+        "b": "It increases the accuracy of experimental data",
+        "c": "It improves laboratory organization and efficiency",
+        "d": "It decreases the cost of instrument replacement"
+      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+  
+  
   ]
 }
