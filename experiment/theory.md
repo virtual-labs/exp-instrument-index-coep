@@ -1,3 +1,5 @@
+## Theory
+
 In an EPC (Erection, Procurement and Construction project the job of an Instrumentation and Control Engineer is divided in two categories viz.
 1.	Pre Engineering activities
 2.	Post Engineering activities
@@ -41,5 +43,5 @@ Revision: 01
 
 
 
-![*Sheet 1* ](images/Expt_5_Instrument1.xlsx)
-![*Sheelt 2* ](images/Expt_5_Instrument2.xlsx)
+[Download PDF](images/Expt_5_Instrument1.pdf)
+[Download PDF](images/Expt_5_Instrument2.pdf)
