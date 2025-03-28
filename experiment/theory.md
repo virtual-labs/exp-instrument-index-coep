@@ -42,5 +42,6 @@ Revision: 01
 | 1 | LT-102 | Nil | Water | Transmitter | NA  | mmWC | 4~20 mA | AI | IP68 | NA | On vessel T01 |
 
 
-[Download PDF](images/Expt_5_Instrument1.pdf)
-[Download PDF](images/Expt_5_Instrument2.pdf)
+[Instrumentation Index Sheet 1](images/Expt_5_Instrument1.pdf)
+
+[Instrumentation Index Sheet 2](images/Expt_5_Instrument2.pdf)
