@@ -43,6 +43,6 @@ Revision: 01
 
 
 
-[Download PDF](images/Expt_5_Instrument1.pdf)
+[Instrumentation Index Sheet 1](images/Expt_5_Instrument1.pdf)
 
-[Download PDF](images/Expt_5_Instrument2.pdf)
+[Instrumentation Index Sheet 2](images/Expt_5_Instrument2.pdf)
