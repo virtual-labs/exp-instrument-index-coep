@@ -3,15 +3,9 @@ wrongAttempts = {};
 timerMasterJson = {};
 var cntValidate = 0;
 $("#spray").click(function() {
+	$("#validate,#counter").prop("hidden",false);
 
 	htm = `
-		<div  class="col-sm-12 text-end" id="btnDiv" > 
-	<button type="button" class="btn btn-primary"  id="validate"  style="margin:10px;">Validate</button> 
-	<button type="button" class="btn btn-primary"  id="report"  style="margin:10px;" hidden>Download report</button> 
-	<button type="button" class="btn btn-primary"  id="btnNext" hidden>Next Level</button>
-	<h5 id="counter" class=" btn1 timerStyle">00:00:00</h5>
-	
-	</div>
 	
 	 <div class="container-fluid">
 	 
@@ -193,12 +187,16 @@ $("#spray").click(function() {
 	//		});
 	//	});
 
+	$("#btnNext").click(function() {
+		console.log('indexsheet');
+		indexsheet();
 
-
-	$("#report").click(function() {
-		result();
-		downloadImg();
 	});
+
+//	$("#report").click(function() {
+//		result();
+//		downloadImg();
+//	});
 
 	//   $("#validate").prop("hidden", false);
 	//   $("#next").prop("hidden", false);
@@ -918,18 +916,18 @@ $("#spray").click(function() {
 				text: `Correct elements count: ${placedElements.length}`,
 				confirmButtonText: 'OK'
 			});
-			$("#btnNext").prop("disabled", false);
-			$("#counter").prop("hidden", true);
+			$("#btnNext").prop("hidden", false);
+//			$("#counter").prop("hidden", true);
 			resultJson.validateCount = cntValidate;
 
 
 			//$('img').each(function() {
 			//    $(this).attr('crossorigin', 'anonymous');
 			//});
-			result();
+			indexsheet();
 
 			console.log("correct : " + placedElements.length);
-			console.log(resultJson);
+//			console.log(resultJson);
 		} else {
 			if (wrongAttempts < 3) {
 				wrongAttempts++;

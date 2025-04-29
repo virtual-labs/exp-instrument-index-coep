@@ -1,5 +1,11 @@
+ const today = new Date();
 function indexsheet ()  {
-
+	$("#counter").prop("hidden",false);
+	$("#validate,#btnNext,#report").prop("hidden",true);
+	timerMasterJson.connection=$("#counter").text();
+	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
 let rowCount = 0; 
 let tagNumbers = []; // Array to store user inputs
 let data=[];
@@ -15,7 +21,7 @@ let tags = [
                 "LSL_1", "LSH_1", "PSHH_1", "PSLL_1"
                 , "TSHH_1", "PSLL_2", "PSHH_2",
                 "FE_1", "FT_1", "FIC_1", "VFD_1", "TE_1", "TT_1", "TIC_1",
-                "SCR_1", "TT_2", "SOV_1", "SOV_2", "NE_1", "NT_1", "NIC_1", "VFD_2","demo_1","demo_2"
+                "SCR_1", "TT_2", "SOV_1", "SOV_2", "NE_1", "NT_1", "NIC_1", "VFD_2","VFD_1","LSL_3"
             ];
 let rangeValues = [
     "Switching action", "Switching action"
@@ -201,7 +207,8 @@ let remark=[];
             </tr>
         
         	<tr>
-                <td style="border-top: none;">Date -<input type="date" id="dateV" class="texBoxStyle" tabindex="5"></input> </td>
+               <!-- <td style="border-top: none;">Date - <input type="date" id="dateV" class="texBoxStyle" tabindex="5"></input> </td>-->
+                 <td style="border-top: none;">Date - ${today.toDateString()}</td> 
             </tr>
            
               
@@ -248,6 +255,47 @@ let remark=[];
     </table>
     
 </div>
+<div class="container rev1 step2" style="margin-top: 40px;" hidden>
+        <table >
+           
+             
+             <tr>
+               <td><input type="text" id="nameInput1" placeholder=""></td>
+               <td><input type="text" id="nameInput2" placeholder=""></td>
+               <td><input type="text" id="nameInput3" placeholder=""></td>
+               <td><input type="text" id="nameInput4" placeholder=""></td>
+               <td><input type="text" id="nameInput5" placeholder=""></td>
+               <td><input type="text" id="nameInput6" placeholder=""></td>
+            </tr>
+             <tr>
+               <td><input type="text" id="nameInput7" placeholder=""></td>
+               <td><input type="text" id="nameInput8" placeholder=""></td>
+               <td><input type="text" id="nameInput9" placeholder=""></td>
+               <td><input type="text" id="nameInput10" placeholder=""></td>
+               <td><input type="text" id="nameInput11" placeholder=""></td>
+               <td><input type="text" id="nameInput12" placeholder=""></td>
+            </tr>
+              <tr>
+                <th>0</th>
+                <th></th>
+                <th></th>
+                <th>Inital submission</th>
+                <th ><input type="text" id="nameInput13" placeholder=""></th>
+              <th><input type="text" id="nameInput14" placeholder=""></th>
+            </tr>
+             <tr>
+                <th>Revision</th>
+                <th>Date- ${today.toDateString()}</th>
+                <th></th>
+                <th>Description</th>
+                <th >Checked By</th>
+              <th>Approved by</th>
+            </tr>
+            
+        </table>
+       <button class="btn btn-danger  " id="revVerify" data-bs-toggle="modal" data-bs-target="#revModal" style="float:right;margin: 10px;" >Submit</button>
+ 
+</div>
 	 <div class="container-fluid" style="margin-bottom:20px;">
 	<div  class="col-sm-12" > 
 	<button class="btn btn-danger  " id="verify" data-bs-toggle="modal" data-bs-target="#myModal2" style="float:right;margin: 10px;" hidden>Submit</button>
@@ -255,8 +303,10 @@ let remark=[];
 	 <i class="fa fa-plus-square " style="font-size:20px;color:#fff;" ></i>&nbsp;Add new tag</button>
 	 <button class="btn btn-success " id="exportExcel" style="float:right;margin: 10px;background-color:teal;" hidden>Download Excelsheet</button>
 	 <button class="btn btn-success " id="correctSheet" style="float:right;margin: 10px;background-color:teal;" hidden>Standard index Sheet </button>
-	 
+ <button class="btn btn-success " id="btnResult" style="float:right;margin: 10px;background-color:teal;"  hidden>Result </button>
+
 	     </div>
+	     
  <!-- The Modal -->
 		<div class="modal" id="myModal2">
 		  <div class="modal-dialog modal-md">
@@ -280,9 +330,84 @@ let remark=[];
 		 </div>
 		  </div>
 		</div>
-</div>`;
+</div>
+<!-- The Modal -->
+		<div class="modal" id="revModal">
+		  <div class="modal-dialog modal-md">
+		    <div class="modal-content">
+		
+		      <!-- Modal Header -->
+		      <div class="modal-header" style="background-color: teal;color: #fff;">
+		        <h4 class="modal-title">Message Box</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+		
+		      <!-- Modal body -->
+		      <div class="modal-body" id="revMsg" style=" font-weight: bold; font-size: large;font-family:monospace;" >
+				
+		      </div>
+		
+		      <!-- Modal footer -->
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+		      </div>
+		 </div>
+		  </div>
+		</div>
+</div>
+`;
 	
 	$("#main-div").html(htm);
+	$("#btnResult").click(function(){
+		resultJson.attempt=attempt;
+		console.log(resultJson);
+		result();
+	});
+	
+	$("#exportpdf").click(function () {
+		downloadPDF();
+	});
+	
+	async function downloadPDF() {
+		  const { jsPDF } = window.jspdf;
+		  const pdf = new jsPDF({
+		    orientation: 'landscape',
+		    unit: 'mm',
+		    format: 'a4'
+		  });
+
+		  const table = document.getElementById('Sheet1');
+		  const rows = [];
+		  const headers = [];
+
+		  // Get table headers
+		  table.querySelectorAll('thead tr th').forEach(th => {
+		    headers.push(th.innerText.trim());
+		  });
+
+		  // Get table rows
+		  table.querySelectorAll('tbody tr').forEach(tr => {
+		    const row = [];
+		    tr.querySelectorAll('td').forEach(td => {
+		      row.push(td.innerText.trim());
+		    });
+		    rows.push(row);
+		  });
+
+		  // Draw table
+		  pdf.autoTable({
+		    head: [headers],
+		    body: rows,
+		    startY: 20,        // top margin
+		    margin: { left: 10, right: 10 },  // side margins
+		    styles: { fontSize: 10 },         // font size
+		    headStyles: { fillColor: [22, 160, 133] } // header color (optional)
+		  });
+
+		  pdf.save('Instrument_index.pdf');
+		}
+	
+	
 	$("#exportExcel").click(function () {
 	    let data = [];
 	    let tagno=[],nameInstr = [], application = [], location1 = [], pidno = [], range = [], unit = [], 
@@ -478,12 +603,13 @@ let remark=[];
 						    if(matchCounter==stdtags.length && rowCount==stdtags.length){
 						    	
 						    	 $("#msg").html("Instrument Index sheet is correct.").css("color", "green");
+						    	 $(".rev1,#revVerify").prop("hidden",false);
 						    	 $("#verify,#add").prop("hidden",true);
-						    	 $("#exportExcel").prop("hidden",false);
-						    	 $("#Sheet1").append(bottomRow);
-						    	 $("input[type='text']").prop("disabled", true);
-						    	 $("input[type='date']").prop("disabled", true);
-						    	 $("select,#remove").prop("disabled", true);
+//						    	 $("#verify").prop("hidden",false);
+//						    	 $("#Sheet1").append(bottomRow);
+//						    	 $("input[type='text']").prop("disabled", true);
+//						    	 $("input[type='date']").prop("disabled", true);
+//						    	 $("select,#remove").prop("disabled", true);
 						    	 
 						    }
 						    else{
@@ -492,16 +618,54 @@ let remark=[];
 					  attempt++;
 					 }
 				 else{
-					 $("#msg").html("HERE IS A STANDARD INSTRUMENT INDEX SHEET AS PER THE PLANT REQUIREMENT. ").css("color", "#1c2f6a");
-					 $("#verify,#add").prop("hidden",true);
-					 $("#correctSheet").prop("hidden",false);
+//					 $("#msg").html("HERE IS A STANDARD INSTRUMENT INDEX SHEET AS PER THE PLANT REQUIREMENT. ").css("color", "#1c2f6a");
+//					 $("#verify,#add").prop("hidden",true);
+//					 $("#correctSheet").prop("hidden",false);
 					 
+					 $(".rev1,#revVerify").prop("hidden",false);
+					 $("#add,#verify").prop("hidden",true);
 //					 tableMake();
 				 }
 			}
 				  
             });
+			 var attemptCount=0;
+			var id=0;
+			$('#revVerify').click(function () {
+			    attemptCount++;
 
+			    let allFilled = true;
+
+			    // Loop through all text inputs inside .rev1
+			    $('.rev1 input[type="text"]').each(function () {
+			        if ($(this).val().trim() === "") {
+			            allFilled = false;
+			            $(this).css("border-bottom", "2px solid #a10f0f"); // Highlight empty input
+			        } else {
+			            $(this).css("border-bottom", "2px solid #333"); // Reset border
+			        }
+			    });
+
+			    if (allFilled) {
+			        $('#revMsg').html("All fields are filled. Go to result page.").css({
+			            "color": "green",
+			            "font-weight": "bold",
+			            "text-align": "left"
+			        });
+			        $('#revVerify').prop("disabled", true);
+			        $('#btnResult').prop("hidden", false);
+			    } else {
+			        $('#revMsg').html("Please fill in all fields.").css({
+			            "color": "#a10f0f",
+			            "font-weight": "bold",
+			            "text-align": "left"
+			        });
+			        $('#revVerify').prop("hidden", false);
+			        $('#btnResult').prop("hidden", true);
+			    }
+
+			    id++; // (Only if you are managing IDs externally — otherwise, remove this)
+			});
 				$("#add").click(function () {
 				    let isValid = true;
 				    console.log(" row count "+rowCount);
@@ -524,10 +688,15 @@ let remark=[];
 						        	
 						        	if(rowCount>=0)
 							    	{
-							    	 $("#verify").prop("hidden", false);
-//							    	 $("#add").prop("hidden", true);
-//							    	 $("#msg").html("");
+//							    	 $("#verify").prop("hidden", false);
+//							    	 var selectedValue = $(`#tag_no_${rowCount}`).val();
+//							    	  console.log(" selectedValue "+selectedValue);
+//
+//							    	  // Disable the selected option in *all* dropdowns
+//							    	  $(`.tag-dropdown option[value='${selectedValue}']`).prop("disabled", true);
+							    	 
 							    	}
+						        	
 						        	 $("#msg").html("ADD NEW TAGS DETAILS.").css("color", "#630b91"); 
 										    let newRow = `<tr>
 										        <td id="sr_no_${rowCount}" >${rowCount+1}</td>
@@ -595,7 +764,7 @@ let remark=[];
 										    
 										    // Populate tag dropdown with options
 										    let dropdown = $(`#tag_no_${rowCount}`);
-										    dropdown.append(`<option value="">Select Tag</option>`); // Default option
+//										    dropdown.append(`<option value="">Select Tag</option>`); // Default option
 										    $.each(tags, function (index, value) {
 										        dropdown.append(`<option value="${value}">${value}</option>`);
 										    });
@@ -611,7 +780,18 @@ let remark=[];
 
 											
 						        }
-						        rowCount++; // Increment row count
+						        
+						       // console.log("Before Increment : " + rowCount);
+						       rowCount++;
+						       if(rowCount==stdtags.length){
+						    	   
+						    	   $("#verify").prop("hidden", false);
+						    	   $("#add").prop("hidden", true);
+						       }
+//						       console.log(" rowCount dfklgj "+rowCount);
+						         // Increment row count
+//						        console.log(" rowCount12 "+rowCount);
+						       
 				});
 				// Remove row functionality
 				$(document).on("click", "#remove", function () {
@@ -624,7 +804,8 @@ let remark=[];
 				        $("#verify").prop("hidden", true);
 				    }
 				    else{
-				    	 $("#verify").prop("hidden", false);
+				    	 $("#verify").prop("hidden", true);
+				    	 $("#add").prop("hidden",false);
 				    }
 				});
 				function tableMake(){
@@ -664,7 +845,8 @@ let remark=[];
 					$("#main-div").html(htm);
 					let row =``;
 					 let tbody = $("#correctTable tbody");
-			            for (let i = 0; i < stdtags.length; i++) {
+					 
+			            for (let i = 0; i <stdtags.length ; i++) {
 			                 row += `<tr>
 			                 <td>${i+1}</td>
 			                    <td>${stdtags[i]}</td>
