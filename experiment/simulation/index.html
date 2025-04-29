@@ -18,10 +18,10 @@
 <link rel="stylesheet" href="css/result.css">
     
     <style>
-/* 	@font-face { */
-/* 		font-family: 'digital-clock-font'; */
-/* 		src: url('font/digital-7.ttf'); */
-/* 	} */
+ 	@font-face { 
+		font-family: 'digital-clock-font'; 
+ 		src: url('font/digital-7.ttf'); 
+ 	} 
   
              @keyframes blinker { 
   50% { 
@@ -79,7 +79,15 @@
 	    <span id="colgName">COEP TECHNOLOGICAL UNIVERSITY PUNE</span>	
 </header>
 
-
+<div class="row">
+<div  class="col-sm-12 text-end" id="btnDiv" > 
+	<button type="button" class="btn btn-primary"  id="validate"  style="margin:10px;" hidden>Validate</button> 
+	<button type="button" class="btn btn-primary"  id="report"  style="margin:10px;" hidden>Download report</button> 
+	<button type="button" class="btn btn-primary"  id="btnNext" hidden >Next Level</button>
+	<h5 id="counter" class=" btn1 timerStyle" hidden>00:00:00</h5>
+	
+	</div>
+</div>
 <div class="container-fluid" style="margin-top:5px;" id="main-div">
 <!--	<div  class="col-sm-12 text-end" id="btnDiv" > -->
       
