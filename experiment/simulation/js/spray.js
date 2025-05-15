@@ -262,7 +262,6 @@ let remark=[];
              <tr>
                <td><input type="text" id="nameInput1" placeholder=""></td>
                <td><input type="text" id="nameInput2" placeholder=""></td>
-               <td><input type="text" id="nameInput3" placeholder=""></td>
                <td><input type="text" id="nameInput4" placeholder=""></td>
                <td><input type="text" id="nameInput5" placeholder=""></td>
                <td><input type="text" id="nameInput6" placeholder=""></td>
@@ -270,14 +269,12 @@ let remark=[];
              <tr>
                <td><input type="text" id="nameInput7" placeholder=""></td>
                <td><input type="text" id="nameInput8" placeholder=""></td>
-               <td><input type="text" id="nameInput9" placeholder=""></td>
                <td><input type="text" id="nameInput10" placeholder=""></td>
                <td><input type="text" id="nameInput11" placeholder=""></td>
                <td><input type="text" id="nameInput12" placeholder=""></td>
             </tr>
-              <tr>
+              <tr class="revcheck">
                 <th>0</th>
-                <th></th>
                 <th></th>
                 <th>Inital submission</th>
                 <th ><input type="text" id="nameInput13" placeholder=""></th>
@@ -286,7 +283,6 @@ let remark=[];
              <tr>
                 <th>Revision</th>
                 <th>Date- ${today.toDateString()}</th>
-                <th></th>
                 <th>Description</th>
                 <th >Checked By</th>
               <th>Approved by</th>
@@ -637,7 +633,7 @@ let remark=[];
 			    let allFilled = true;
 
 			    // Loop through all text inputs inside .rev1
-			    $('.rev1 input[type="text"]').each(function () {
+			    $('.revcheck input[type="text"]').each(function () {
 			        if ($(this).val().trim() === "") {
 			            allFilled = false;
 			            $(this).css("border-bottom", "2px solid #a10f0f"); // Highlight empty input

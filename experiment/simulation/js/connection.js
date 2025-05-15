@@ -834,14 +834,14 @@ $("#spray").click(function() {
 		//	    );
 
 		let validPaths = predefinedPaths
-			.filter(path => path.validate) // ✅ Only check paths marked as true
+			.filter(path => path.validate) // Only check paths marked as true
 			.every(path =>
 				placedElements.some(el =>
 					el.attrs && el.attrs.path &&
 					el.attrs.path[0][1] === path.x && el.attrs.path[0][2] === path.y &&
 					(
-						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // ✅ Dashed line validation
-						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // ✅ Solid line validation
+						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // Dashed line validation
+						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // Solid line validation
 					)
 				)
 			);
@@ -855,14 +855,14 @@ $("#spray").click(function() {
 
 
 		let validPaths1 = predefinedPaths1
-			.filter(path => path.validate) // ✅ Only check paths marked as true
+			.filter(path => path.validate) // Only check paths marked as true
 			.every(path =>
 				placedElements.some(el =>
 					el.attrs && el.attrs.path &&
 					el.attrs.path[0][1] === path.x && el.attrs.path[0][2] === path.y &&
 					(
-						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // ✅ Dashed line validation
-						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // ✅ Solid line validation
+						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // Dashed line validation
+						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // Solid line validation
 					)
 				)
 			);
@@ -877,14 +877,14 @@ $("#spray").click(function() {
 		//	);
 
 		let validPaths2 = predefinedPaths2
-			.filter(path => path.validate) // ✅ Only check paths marked as true
+			.filter(path => path.validate) // Only check paths marked as true
 			.every(path =>
 				placedElements.some(el =>
 					el.attrs && el.attrs.path &&
 					el.attrs.path[0][1] === path.x && el.attrs.path[0][2] === path.y &&
 					(
-						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // ✅ Dashed line validation
-						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // ✅ Solid line validation
+						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // Dashed line validation
+						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // Solid line validation
 					)
 				)
 			);
@@ -896,14 +896,14 @@ $("#spray").click(function() {
 
 
 		let validPaths3 = predefinedPaths3
-			.filter(path => path.validate) // ✅ Only check paths marked as true
+			.filter(path => path.validate) // Only check paths marked as true
 			.every(path =>
 				placedElements.some(el =>
 					el.attrs && el.attrs.path &&
 					el.attrs.path[0][1] === path.x && el.attrs.path[0][2] === path.y &&
 					(
-						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // ✅ Dashed line validation
-						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // ✅ Solid line validation
+						(path.dashed && el.attrs["stroke-dasharray"] === "-") || // Dashed line validation
+						(!path.dashed && el.attrs["stroke-dasharray"] === undefined) // Solid line validation
 					)
 				)
 			);
@@ -912,7 +912,7 @@ $("#spray").click(function() {
 		if (validImages && validPaths && validPaths1 && validPaths2 && validPaths3) {
 			Swal.fire({
 				icon: 'success',
-				title: '✅ All elements are placed correctly!',
+				title: 'All elements are placed correctly!',
 				text: `Correct elements count: ${placedElements.length}`,
 				confirmButtonText: 'OK'
 			});
@@ -933,7 +933,7 @@ $("#spray").click(function() {
 				wrongAttempts++;
 				Swal.fire({
 					icon: 'error',
-					title: '❌ Some elements are missing or misplaced!',
+					title: 'Some elements are missing or misplaced!',
 					text: `Wrong attempts: ${wrongAttempts}`,
 					confirmButtonText: 'Try Again'
 
