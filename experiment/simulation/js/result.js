@@ -1,11 +1,12 @@
 function result(){
-	
+		const now = new Date();
+	const formatted = now.toLocaleString();
 	timerMasterJson.sheet=$("#counter").text();
 //	console.log(timerMasterJson);
 	
 	$("#validate,#btnNext,#counter").prop("hidden",true);
 	$("#report").prop("hidden",false);
-//	$("#Header").html("<center><span >SPRAY DRYING PILOT PLANT</span></center>");
+//	$("#Header").html("<center><span >Instrument Index sheet</span></center>");
 	
 	htm=''
 	+'<div class="container-fluid">'
@@ -163,7 +164,7 @@ function result(){
     
     
     +'<div class="row">'
-    + '     <h5 class="section-title sectionStyle" style="float:right;" id="mis">Enter MIS No.: <input type="number" id="nameInput" class="ml-4"></h5>'
+    + '<h5 class="section-title sectionStyle" style="float:right;" id="mis">Enter Name: <input type="text" id="nameInput" class="ml-4">&emsp;<label id="dateTime1" style="float:right;">'+formatted+'</label></h5>'
     +' <div class="col-md-12">'
     +'   <div class="box">'
     +'     <h5 class="section-title sectionStyle" >INSTRUMENT INDEX SHEET</h5>'
@@ -435,7 +436,9 @@ function result(){
 
 
 	$("#report").click(function() {
-		
+		tmp = $("#nameInput").val();
+		if(tmp != ""){
+			
 			  // Restore value from localStorage when page loads
 			  const savedName = localStorage.getItem("username");
 			  if (savedName) {
@@ -469,6 +472,11 @@ function result(){
 				button.hidden = true;
 			});
 			$("#mis").prop("hidden",true);
+			
+			}else{
+				alert("Enter Name");
+			}
 	});
+	
 
 }
