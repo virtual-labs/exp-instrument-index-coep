@@ -52,7 +52,7 @@
     },
 	
 	{
-      "question": "What is the benefit of using a standardized format for the Instrument Index sheet in a plant setting? ",
+      "question": "What is the benefit of using a standardized format for the Instrument Index sheet in a plant? ",
       "answers": {
         "a": "It reduces the time spent on instrument maintenance ",
         "b": "It improves laboratory safety",
@@ -63,23 +63,10 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-  
-  {
-      "question": "Who is typically responsible for maintaining the Instrument Index sheet in a plant setting? ",
-      "answers": {
-        "a": "Laboratory technician",
-        "b": "Plant manager ",
-        "c": "Quality control specialist",
-        "d": "Instrument manufacturer"
-      },
-     
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
 	
 	
   {
-      "question": "How does the Instrument Index sheet contribute to laboratory safety in a plant setting? ",
+      "question": "How does the Instrument Index sheet contribute to laboratory safety in a plant? ",
       "answers": {
         "a": "By reducing the risk of instrument malfunction",
         "b": "By increasing the speed of experimentation ",
@@ -93,7 +80,7 @@
   
   
   {
-      "question": "What is the consequence of not having an up-to-date Instrument Index sheet in a plant setting? ",
+      "question": "What is the consequence of not having an up-to-date Instrument Index sheet in a plant? ",
       "answers": {
         "a": "Increased laboratory efficiency ",
         "b": "Decreased laboratory safety ",
