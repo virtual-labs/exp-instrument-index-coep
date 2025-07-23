@@ -19,7 +19,7 @@
         "a": "Instrument name",
         "b": "Instrument description",
         "c": "Instrument location",
-        "d": "Experimental procedure"
+        "d": "Installation procedure"
       },
      
       "correctAnswer": "d",
@@ -91,7 +91,7 @@
     },
 	
 	{
-      "question": "What is the Instrument Index sheet used for in a laboratory setting? ",
+      "question": "What is the purpose of Instrument Index sheet used for in a laboratory setting? ",
       "answers": {
         "a": "To store experimental data",
         "b": "To track instrument maintenance",
@@ -101,39 +101,6 @@
      
       "correctAnswer": "c",
       "difficulty": "beginner"
-    },
-	
-	{
-      "question": "How often should the Instrument Index sheet be reviewed and updated?",
-      "answers": {
-        "a": "Daily",
-        "b": "Weekly",
-        "c": "Monthly",
-        "d": "Quarterly"
-      },
-     
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-	
-	{
-      "question": "What is the consequence of not having an up-to-date Instrument Index sheet? ",
-      "answers": {
-        "a": "Increased laboratory efficiency ",
-        "b": "Decreased laboratory safety",
-        "c": "Difficulty in locating instruments ",
-        "d": "Improved experimental accuracy"
-      },
-     
-      "correctAnswer": "c",
-      "difficulty": "beginner"
     }
-  
-  
-  
-  
-  
-  
-  
   ]
 }
